@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import locale
 import re
+from server import server
 locale.setlocale(locale.LC_ALL, "")
 
 
@@ -108,5 +109,6 @@ if __name__ == '__main__':
 	application.add_handler(start_handler)
 	application.add_handler(help_handler)
 	application.add_handler(message_handler)
+	server()
 	application.run_polling()
 
