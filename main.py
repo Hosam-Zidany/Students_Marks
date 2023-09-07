@@ -4,7 +4,6 @@ import requests
 from bs4 import BeautifulSoup
 import locale
 import re
-from server import server
 locale.setlocale(locale.LC_ALL, "")
 
 
