@@ -12,7 +12,7 @@ locale.setlocale(locale.LC_ALL, "")
 Token = '6494620945:AAESw9tLPjf06ClbFLixsdz3IHDnfTukGmg'
 
 async def start (ubdate: Update, context: ContextTypes.DEFAULT_TYPE):
-	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "أهلاً بك في بوت العلامات يرجى دخال رقمك الجامعي")
+	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "أهلاً بك في بوت العلامات.... يرجى إدخال رقمك الجامعي")
 
 async def help (ubdate: Update, context: ContextTypes.DEFAULT_TYPE):
 	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "يرجى إدخال رقمك الجامعي وستصلك رسالة بالنتيجة حسب الموقع الرسمي للجامعة")
