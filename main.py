@@ -9,7 +9,7 @@ locale.setlocale(locale.LC_ALL, "")
 
 
 
-Token = '6330027964:AAHyCL76G4_iCY5Wmyap6D0Hrr8jWsrS8DA'
+Token = '6494620945:AAESw9tLPjf06ClbFLixsdz3IHDnfTukGmg'
 
 async def start (ubdate: Update, context: ContextTypes.DEFAULT_TYPE):
 	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "ارسل الرقم الجامعي")
