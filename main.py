@@ -12,10 +12,10 @@ locale.setlocale(locale.LC_ALL, "")
 Token = '6494620945:AAESw9tLPjf06ClbFLixsdz3IHDnfTukGmg'
 
 async def start (ubdate: Update, context: ContextTypes.DEFAULT_TYPE):
-	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "ارسل الرقم الجامعي")
+	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "أهلاً بك في بوت العلامات يرجى دخال رقمك الجامعي")
 
 async def help (ubdate: Update, context: ContextTypes.DEFAULT_TYPE):
-	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "بوت غير رسمي للحصول على علامات كلية طب الأسنان في جامعة حماه")
+	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "يرجى إدخال رقمك الجامعي وستصلك رسالة بالنتيجة حسب الموقع الرسمي للجامعة")
 
 async def the_mark (num):
 	headers ={
@@ -80,14 +80,14 @@ async def the_mark (num):
 	return u''.join(f_list)
 
 async def mark (ubdate: Update, context: ContextTypes.DEFAULT_TYPE):
-	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "جاري العمل.....")
+	await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "لحظة من فضلك.....")
 	num = ubdate.message.text
 	def arabic (num):
 		pattern = re.compile(r'[٠-٩]')
 		match = re.search(pattern, num)
 		return match is not None
 	if any(i.isalpha()for i in num) | arabic(num):
-		await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "يجب أن يتكون الرقم من الأرقام 0-9 فقط")
+		await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "يجب أن يتكون الرقم الجامعي من الأرقام 0~9 فقط")
 	else:
 		#await context.bot.send_message(chat_id = ubdate.effective_chat.id, text = "ubdate")
 		mm = await the_mark(num)
