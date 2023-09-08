@@ -1,7 +1,7 @@
 from flask import Flask
 from threading import Thread
 
-app = Flat(' ')
+app = Flask(' ')
 
 @app.route('/')
 def ping():
